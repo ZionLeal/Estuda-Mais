@@ -1,0 +1,989 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EstudaMais - Sua Plataforma de Estudos Inteligente</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header/Navegação -->
+    <header class="header">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <div class="container">
+            <div class="logo" id="home-logo">
+                <i class="fas fa-brain"></i>
+                <h1>EstudaMais</h1>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#home" class="nav-link active">Início</a></li>
+                    <li><a href="#subjects" class="nav-link">Matérias</a></li>
+                    <li><a href="#quizzes" class="nav-link">Quizzes</a></li>
+                    <li><a href="#simulated" class="nav-link">Simulados</a></li>
+                    <li><a href="#flashcards" class="nav-link">Flashcards</a></li>
+                    <li><a href="#essay" class="nav-link">Redação</a></li>
+                    <li><a href="#ai" class="nav-link">IA</a></li>
+                    <li><a href="#progress" class="nav-link">Progresso</a></li>
+                    <!-- [ADICIONADO - LOGIN MOBILE] Botão de login no menu mobile -->
+                    <li class="mobile-login-item">
+                        <button id="mobile-login-btn" class="nav-link mobile-login-btn">
+                            <i class="fas fa-user"></i> Entrar / Cadastrar
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button id="login-btn" class="btn-secondary">Entrar / Cadastrar</button>
+            </div>
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Seção Home -->
+    <section id="home" class="section active">
+        <div class="container">
+            <div class="hero">
+                <div class="hero-content">
+                    <h2 class="hero-title">Bem-vindo ao <span class="highlight">EstudaMais</span></h2>
+                    <p class="hero-subtitle">A plataforma de estudos inteligente que se adapta ao seu ritmo de aprendizado</p>
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <h3>6</h3>
+                            <p>Matérias</p>
+                        </div>
+                        <div class="stat">
+                            <h3>60+</h3>
+                            <p>Quizzes</p>
+                        </div>
+                        <div class="stat">
+                            <h3>50+</h3>
+                            <p>Flashcards</p>
+                        </div>
+                    </div>
+                    <button class="btn-primary start-studying">Começar a Estudar</button>
+                </div>
+                <div class="hero-image">
+                    <div class="floating-cards-container">
+                        <div class="floating-card">
+                            <i class="fas fa-book"></i>
+                            <h4>Conteúdo Completo</h4>
+                        </div>
+                        <div class="floating-card">
+                            <i class="fas fa-chart-line"></i>
+                            <h4>Acompanhe seu Progresso</h4>
+                        </div>
+                        <div class="floating-card">
+                            <i class="fas fa-robot"></i>
+                            <h4>IA Integrada</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Matérias -->
+    <section id="subjects" class="section">
+        <div class="container">
+            <h2 class="section-title">Acompanhe seu Progresso</h2>
+            <p class="section-subtitle">Acompanhe seu progresso em cada matéria e melhore seu desempenho.</p>
+            
+            <div class="subjects-grid">
+                <div class="subject-card" data-subject="portugues">
+                    <div class="subject-icon">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <h3>Português</h3>
+                    <div class="progress-bar">
+                        <div class="progress" data-progress="0"></div>
+                    </div>
+                    <p class="progress-text">Progresso: <span>0%</span></p>
+                
+                </div>
+                
+                <div class="subject-card" data-subject="matematica">
+                    <div class="subject-icon">
+                        <i class="fas fa-calculator"></i>
+                    </div>
+                    <h3>Matemática</h3>
+                    <div class="progress-bar">
+                        <div class="progress" data-progress="0"></div>
+                    </div>
+                    <p class="progress-text">Progresso: <span>0%</span></p>
+                
+                </div>
+                
+                <div class="subject-card" data-subject="ciencias">
+                    <div class="subject-icon">
+                        <i class="fas fa-flask"></i>
+                    </div>
+                    <h3>Ciências</h3>
+                    <div class="progress-bar">
+                        <div class="progress" data-progress="0"></div>
+                    </div>
+                    <p class="progress-text">Progresso: <span>0%</span></p>
+            
+                </div>
+                
+                <div class="subject-card" data-subject="historia">
+                    <div class="subject-icon">
+                        <i class="fas fa-landmark"></i>
+                    </div>
+                    <h3>História</h3>
+                    <div class="progress-bar">
+                        <div class="progress" data-progress="0"></div>
+                    </div>
+                    <p class="progress-text">Progresso: <span>0%</span></p>
+                    
+                </div>
+                
+                <div class="subject-card" data-subject="geografia">
+                    <div class="subject-icon">
+                        <i class="fas fa-globe-americas"></i>
+                    </div>
+                    <h3>Geografia</h3>
+                    <div class="progress-bar">
+                        <div class="progress" data-progress="0"></div>
+                    </div>
+                    <p class="progress-text">Progresso: <span>0%</span></p>
+                  
+                </div>
+                
+                <div class="subject-card" data-subject="redacao">
+                    <div class="subject-icon">
+                        <i class="fas fa-pen-fancy"></i>
+                    </div>
+                    <h3>Redação</h3>
+                    <div class="progress-bar">
+                        <div class="progress" data-progress="0"></div>
+                    </div>
+                    <p class="progress-text">Progresso: <span>0%</span></p>
+                  
+                </div>
+            </div>
+            
+            <!-- Painel de Matéria Selecionada -->
+            <div id="subject-panel" class="subject-panel hidden">
+                <div class="panel-header">
+                    <h3 id="panel-title">Português</h3>
+                    <button class="btn-close"><i class="fas fa-times"></i></button>
+                </div>
+                <div class="panel-content">
+                    <div class="panel-options">
+                        <div class="option-card" data-option="quizzes">
+                            <i class="fas fa-question-circle"></i>
+                            <h4>Quizzes</h4>
+                            <p>Teste seus conhecimentos com perguntas específicas</p>
+                        </div>
+                        <div class="option-card" data-option="simulated">
+                            <i class="fas fa-clipboard-list"></i>
+                            <h4>Simulados</h4>
+                            <p>Responda questões de todas as matérias</p>
+                        </div>
+                        <div class="option-card" data-option="flashcards">
+                            <i class="fas fa-layer-group"></i>
+                            <h4>Flashcards</h4>
+                            <p>Memorize conceitos importantes</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Quizzes -->
+    <section id="quizzes" class="section">
+        <div class="container">
+            <h2 class="section-title">Quizzes</h2>
+            <p class="section-subtitle">Teste seus conhecimentos em cada matéria</p>
+            
+            <div class="quiz-selection">
+                <div class="quiz-card" data-quiz="portugues">
+                    <h3>Português</h3>
+                    <p>10 perguntas sobre gramática e literatura</p>
+                    <button class="btn-secondary start-quiz">Iniciar Quiz</button>
+                </div>
+                
+                <div class="quiz-card" data-quiz="matematica">
+                    <h3>Matemática</h3>
+                    <p>10 perguntas sobre álgebra e geometria</p>
+                    <button class="btn-secondary start-quiz">Iniciar Quiz</button>
+                </div>
+                
+                <div class="quiz-card" data-quiz="ciencias">
+                    <h3>Ciências</h3>
+                    <p>10 perguntas sobre biologia, física e química</p>
+                    <button class="btn-secondary start-quiz">Iniciar Quiz</button>
+                </div>
+                
+                <div class="quiz-card" data-quiz="historia">
+                    <h3>História</h3>
+                    <p>10 perguntas sobre história do Brasil e mundial</p>
+                    <button class="btn-secondary start-quiz">Iniciar Quiz</button>
+                </div>
+                
+                <div class="quiz-card" data-quiz="geografia">
+                    <h3>Geografia</h3>
+                    <p>10 perguntas sobre geografia física e humana</p>
+                    <button class="btn-secondary start-quiz">Iniciar Quiz</button>
+                </div>
+                
+                <div class="quiz-card" data-quiz="redacao">
+                    <h3>Redação</h3>
+                    <p>10 perguntas sobre técnicas de redação</p>
+                    <button class="btn-secondary start-quiz">Iniciar Quiz</button>
+                </div>
+            </div>
+            
+            <!-- Quiz Ativo -->
+            <div id="active-quiz" class="active-quiz hidden">
+                <div class="quiz-header">
+                    <h3 id="quiz-title">Quiz de Português</h3>
+                    <div class="quiz-progress">
+                        <div class="progress-bar">
+                            <div class="progress" id="quiz-progress-bar"></div>
+                        </div>
+                        <span id="quiz-progress-text">1/15</span>
+                    </div>
+                </div>
+                
+                <div class="quiz-content">
+                    <div class="question-container">
+                        <h4 id="question-text">Pergunta aparecerá aqui</h4>
+                        <div id="options-container" class="options-container">
+                            <!-- Opções serão inseridas via JavaScript -->
+                        </div>
+                    </div>
+                    
+                    <div class="quiz-navigation">
+                        <button id="prev-question" class="btn-secondary" disabled>Anterior</button>
+                        <button id="next-question" class="btn-primary">Próxima</button>
+                        <button id="finish-quiz" class="btn-primary hidden">Finalizar</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Resultado do Quiz -->
+            <div id="quiz-result" class="quiz-result hidden">
+                <div class="result-header">
+                    <h3>Resultado do Quiz</h3>
+                    <div class="score-circle">
+                        <span id="score-percent">0%</span>
+                    </div>
+                </div>
+                
+                <div class="result-details">
+                    <div class="result-stat">
+                        <h4>Acertos</h4>
+                        <p id="correct-answers">0</p>
+                    </div>
+                    <div class="result-stat">
+                        <h4>Erros</h4>
+                        <p id="wrong-answers">0</p>
+                    </div>
+                    <div class="result-stat">
+                        <h4>Desempenho</h4>
+                        <p id="performance">Ruim</p>
+                    </div>
+                </div>
+                
+                <div class="result-feedback">
+                    <h4>Feedback</h4>
+                    <p id="feedback-text">Seu desempenho foi ruim. Continue estudando para melhorar!</p>
+                </div>
+                
+                <div class="result-actions">
+                    <button id="review-quiz" class="btn-secondary">Revisar Respostas</button>
+                    <button id="new-quiz" class="btn-primary">Fazer Novo Quiz</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Simulados -->
+    <section id="simulated" class="section">
+        <div class="container">
+            <h2 class="section-title">Simulados</h2>
+            <p class="section-subtitle">Teste seus conhecimentos com questões de todas as matérias</p>
+            
+            <div class="simulated-info">
+                <div class="info-card">
+                    <i class="fas fa-list-ol"></i>
+                    <h4>20 Questões</h4>
+                    <p>Questões misturadas de todas as matérias</p>
+                </div>
+                <div class="info-card">
+                    <i class="fas fa-clock"></i>
+                    <h4>60 Minutos</h4>
+                    <p>Tempo estimado para completar o simulado</p>
+                </div>
+                <div class="info-card">
+                    <i class="fas fa-chart-bar"></i>
+                    <h4>Nota Final</h4>
+                    <p>Receba feedback detalhado sobre seu desempenho</p>
+                </div>
+            </div>
+            
+            <div class="simulated-actions">
+                <button id="start-simulated" class="btn-primary">Iniciar Simulado</button>
+                <button id="view-previous" class="btn-secondary">Ver Simulados Anteriores</button>
+            </div>
+            
+            <!-- Simulado Ativo -->
+            <div id="active-simulated" class="active-simulated hidden">
+                <div class="simulated-header">
+                    <h3>Simulado Geral</h3>
+                    <div class="timer">
+                        <i class="fas fa-clock"></i>
+                        <span id="simulated-timer">60:00</span>
+                    </div>
+                    <div class="simulated-progress">
+                        <div class="progress-bar">
+                            <div class="progress" id="simulated-progress-bar"></div>
+                        </div>
+                        <span id="simulated-progress-text">1/20</span>
+                    </div>
+                </div>
+                
+                <div class="simulated-content">
+                    <div class="question-container">
+                        <h4 id="simulated-question-text">Pergunta aparecerá aqui</h4>
+                        <div id="simulated-options-container" class="options-container">
+                            <!-- Opções serão inseridas via JavaScript -->
+                        </div>
+                    </div>
+                    
+                    <div class="simulated-navigation">
+                        <button id="prev-simulated" class="btn-secondary" disabled>Anterior</button>
+                        <button id="next-simulated" class="btn-primary">Próxima</button>
+                        <button id="finish-simulated" class="btn-primary hidden">Finalizar</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Resultado do Simulado -->
+            <div id="simulated-result" class="simulated-result hidden">
+                <div class="result-header">
+                    <h3>Resultado do Simulado</h3>
+                    <div class="score-display">
+                        <span id="simulated-score">0</span>
+                        <small>de 1000 pontos</small>
+                    </div>
+                </div>
+                
+                <div class="result-details">
+                    <div class="result-stat">
+                        <h4>Acertos</h4>
+                        <p id="simulated-correct">0</p>
+                    </div>
+                    <div class="result-stat">
+                        <h4>Erros</h4>
+                        <p id="simulated-wrong">0</p>
+                    </div>
+                    <div class="result-stat">
+                        <h4>Tempo</h4>
+                        <p id="simulated-time">0:00</p>
+                    </div>
+                </div>
+                
+                <div class="subject-breakdown">
+                    <h4>Desempenho por Matéria</h4>
+                    <div id="subject-breakdown" class="breakdown-list">
+                        <!-- Detalhes por matéria serão inseridos via JavaScript -->
+                    </div>
+                </div>
+                
+                <div class="result-feedback">
+                    <h4>Feedback</h4>
+                    <p id="simulated-feedback">Seu desempenho foi ruim. Continue estudando para melhorar!</p>
+                </div>
+                
+                <div class="result-actions">
+                    <button id="review-simulated" class="btn-secondary">Revisar Respostas</button>
+                    <button id="new-simulated" class="btn-primary">Fazer Novo Simulado</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Flashcards -->
+    <section id="flashcards" class="section">
+        <div class="container">
+            <h2 class="section-title">Flashcards</h2>
+            <p class="section-subtitle">Memorize conceitos importantes de cada matéria</p>
+            
+            <div class="flashcards-selection">
+                <div class="flashcard-set" data-set="portugues">
+                    <h3>Português</h3>
+                    <p>10 flashcards sobre gramática e literatura</p>
+                    <button class="btn-secondary start-flashcards">Estudar</button>
+                </div>
+                
+                <div class="flashcard-set" data-set="matematica">
+                    <h3>Matemática</h3>
+                    <p>10 flashcards sobre fórmulas e conceitos</p>
+                    <button class="btn-secondary start-flashcards">Estudar</button>
+                </div>
+                
+                <div class="flashcard-set" data-set="ciencias">
+                    <h3>Ciências</h3>
+                    <p>10 flashcards sobre biologia, física e química</p>
+                    <button class="btn-secondary start-flashcards">Estudar</button>
+                </div>
+                
+                <div class="flashcard-set" data-set="historia">
+                    <h3>História</h3>
+                    <p>10 flashcards sobre fatos históricos</p>
+                    <button class="btn-secondary start-flashcards">Estudar</button>
+                </div>
+                
+                <div class="flashcard-set" data-set="geografia">
+                    <h3>Geografia</h3>
+                    <p>10 flashcards sobre geografia física e humana</p>
+                    <button class="btn-secondary start-flashcards">Estudar</button>
+                </div>
+                
+                <div class="flashcard-set" data-set="redacao">
+                    <h3>Redação</h3>
+                    <p>10 flashcards sobre técnicas de redação</p>
+                    <button class="btn-secondary start-flashcards">Estudar</button>
+                </div>
+            </div>
+            
+            <!-- Flashcards Ativos -->
+            <div id="active-flashcards" class="active-flashcards hidden">
+                <div class="flashcards-header">
+                    <h3 id="flashcards-title">Flashcards de Português</h3>
+                    <div class="flashcards-progress">
+                        <span id="flashcards-progress-text">1/10</span>
+                    </div>
+                </div>
+                
+                <div class="flashcards-container">
+                    <div class="flashcard" id="flashcard">
+                        <div class="flashcard-inner">
+                            <div class="flashcard-front">
+                                <h4 id="flashcard-question">Pergunta aparecerá aqui</h4>
+                                <p class="hint">Clique para ver a resposta</p>
+                            </div>
+                            <div class="flashcard-back">
+                                <h4>Resposta</h4>
+                                <p id="flashcard-answer">Resposta aparecerá aqui</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="flashcards-actions">
+                    <button id="next-flashcard" class="btn-primary">
+                        <i class="fas fa-arrow-right"></i> Próximo
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Resultado dos Flashcards -->
+            <div id="flashcards-result" class="flashcards-result hidden">
+                <div class="result-header">
+                    <h3>Conclusão dos Flashcards</h3>
+                    <div class="completion-badge">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                </div>
+                
+                <div class="result-details">
+                    <div class="result-stat">
+                        <h4>Aprendidos</h4>
+                        <p id="learned-count">0</p>
+                    </div>
+                    <div class="result-stat">
+                        <h4>Para Revisar</h4>
+                        <p id="review-count">0</p>
+                    </div>
+                    <div class="result-stat">
+                        <h4>Progresso</h4>
+                        <p id="flashcards-progress">0%</p>
+                    </div>
+                </div>
+                
+                <div class="result-actions">
+                    <button id="review-again" class="btn-secondary">Rever Novamente</button>
+                    <button id="new-flashcards" class="btn-primary">Estudar Outro Conjunto</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Redação -->
+    <section id="essay" class="section">
+        <div class="container">
+            <h2 class="section-title">Correção de Redação</h2>
+            <p class="section-subtitle">Escreva sua redação e receba uma correção detalhada</p>
+            
+            <div class="essay-container">
+                <div class="essay-instructions">
+                    <h4>Instruções</h4>
+                    <ul>
+                        <li>Escreva uma redação dissertativa-argumentativa</li>
+                        <li>Use no mínimo 20 linhas e no máximo 30 linhas</li>
+                        <li>O tema é: <strong>"Os desafios da educação no Brasil no século XXI"</strong></li>
+                        <li>Sua redação será avaliada com base nas 5 competências do ENEM</li>
+                    </ul>
+                    
+                    <div class="competencies">
+                        <h5>Competências Avaliadas:</h5>
+                        <ol>
+                            <li>Domínio da norma padrão da língua escrita</li>
+                            <li>Compreensão da proposta de redação</li>
+                            <li>Seleção e organização das informações</li>
+                            <li>Demonstração de conhecimento da língua</li>
+                            <li>Elaboração de proposta de intervenção</li>
+                        </ol>
+                    </div>
+                </div>
+                
+                <div class="essay-editor">
+                    <div class="editor-header">
+                        <h4>Escreva sua Redação</h4>
+                        <div class="word-count">
+                            <span id="line-count">0</span> linhas
+                        </div>
+                    </div>
+                    
+                    <textarea id="essay-text" placeholder="Comece a escrever sua redação aqui..."></textarea>
+                    
+                    <div class="editor-actions">
+                        <button id="clear-essay" class="btn-secondary">Limpar</button>
+                        <button id="correct-essay" class="btn-primary">Corrigir Redação</button>
+                        <button id="send-to-ai" class="btn-primary">Enviar para IA</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Resultado da Redação -->
+            <div id="essay-result" class="essay-result hidden">
+                <div class="result-header">
+                    <h3>Resultado da Correção</h3>
+                    <div class="score-display">
+                        <span id="essay-score">0</span>
+                        <small>pontos</small>
+                    </div>
+                </div>
+                
+                <div class="competencies-scores">
+                    <h4>Notas por Competência</h4>
+                    <div class="competency-bars">
+                        <div class="competency-bar">
+                            <label>Competência 1</label>
+                            <div class="progress-bar">
+                                <div class="progress" id="comp1-progress"></div>
+                            </div>
+                            <span id="comp1-score">0</span>
+                        </div>
+                        <div class="competency-bar">
+                            <label>Competência 2</label>
+                            <div class="progress-bar">
+                                <div class="progress" id="comp2-progress"></div>
+                            </div>
+                            <span id="comp2-score">0</span>
+                        </div>
+                        <div class="competency-bar">
+                            <label>Competência 3</label>
+                            <div class="progress-bar">
+                                <div class="progress" id="comp3-progress"></div>
+                            </div>
+                            <span id="comp3-score">0</span>
+                        </div>
+                        <div class="competency-bar">
+                            <label>Competência 4</label>
+                            <div class="progress-bar">
+                                <div class="progress" id="comp4-progress"></div>
+                            </div>
+                            <span id="comp4-score">0</span>
+                        </div>
+                        <div class="competency-bar">
+                            <label>Competência 5</label>
+                            <div class="progress-bar">
+                                <div class="progress" id="comp5-progress"></div>
+                            </div>
+                            <span id="comp5-score">0</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="essay-feedback">
+                    <h4>Feedback Detalhado</h4>
+                    <div id="feedback-content" class="feedback-content">
+                        <!-- Feedback será inserido via JavaScript -->
+                    </div>
+                </div>
+                
+                <div class="result-actions">
+                    <button id="new-essay" class="btn-primary">Escrever Nova Redação</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção IA -->
+    <section id="ai" class="section">
+        <div class="container">
+            <h2 class="section-title">Assistente de IA</h2>
+            <p class="section-subtitle">Tire suas dúvidas com nossa inteligência artificial</p>
+            
+            <div class="ai-chat-container">
+                <div class="ai-chat">
+                    <div class="chat-header">
+                        <h4>Chat com IA</h4>
+                        <button id="clear-chat" class="btn-secondary">Limpar Chat</button>
+                    </div>
+                    
+                    <div id="chat-messages" class="chat-messages">
+                        <div class="message ai-message">
+                            <div class="message-avatar">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <div class="message-content">
+                                <p>Olá! Sou seu assistente de estudos. Como posso ajudá-lo hoje? Pode me fazer perguntas sobre qualquer matéria!</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="chat-input">
+                        <textarea id="chat-input" placeholder="Digite sua pergunta..."></textarea>
+                        <button id="send-message" class="btn-primary">
+                            <i class="fas fa-paper-plane"></i> Enviar para IA
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Progresso -->
+    <section id="progress" class="section">
+        <div class="container">
+            <h2 class="section-title">Seu Progresso</h2>
+            <p class="section-subtitle">Acompanhe seu desempenho e evolução nos estudos</p>
+            
+            <div class="progress-dashboard">
+                <div class="overview">
+                    <div class="overview-card">
+                        <h4>Progresso Geral</h4>
+                        <div class="progress-circle">
+                            <svg width="120" height="120" viewBox="0 0 120 120">
+                                <circle cx="60" cy="60" r="54" fill="none" stroke="#e0e0e0" stroke-width="12"></circle>
+                                <circle cx="60" cy="60" r="54" fill="none" stroke="#4a6cf7" stroke-width="12" stroke-dasharray="339.292" stroke-dashoffset="0" id="overall-progress-circle"></circle>
+                                <text x="60" y="65" text-anchor="middle" font-size="20" font-weight="bold" fill="#4a6cf7" id="overall-progress-text">0%</text>
+                            </svg>
+                        </div>
+                    </div>
+                    
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <i class="fas fa-question-circle"></i>
+                            <h4>Quizzes Concluídos</h4>
+                            <p id="quizzes-completed">0</p>
+                        </div>
+                        <div class="stat-card">
+                            <i class="fas fa-clipboard-list"></i>
+                            <h4>Simulados Realizados</h4>
+                            <p id="simulated-completed">0</p>
+                        </div>
+                        <div class="stat-card">
+                            <i class="fas fa-layer-group"></i>
+                            <h4>Flashcards Estudados</h4>
+                            <p id="flashcards-studied">0</p>
+                        </div>
+                        <div class="stat-card">
+                            <i class="fas fa-pen-fancy"></i>
+                            <h4>Redações Corrigidas</h4>
+                            <p id="essays-corrected">0</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="subject-progress">
+                    <h4>Progresso por Matéria</h4>
+                    <div class="subject-progress-list">
+                        <div class="subject-progress-item">
+                            <div class="subject-info">
+                                <i class="fas fa-book-open"></i>
+                                <span>Português</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress" id="portugues-progress" data-progress="0"></div>
+                            </div>
+                            <span class="progress-percent" id="portugues-percent">0%</span>
+                        </div>
+                        
+                        <div class="subject-progress-item">
+                            <div class="subject-info">
+                                <i class="fas fa-calculator"></i>
+                                <span>Matemática</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress" id="matematica-progress" data-progress="0"></div>
+                            </div>
+                            <span class="progress-percent" id="matematica-percent">0%</span>
+                        </div>
+                        
+                        <div class="subject-progress-item">
+                            <div class="subject-info">
+                                <i class="fas fa-flask"></i>
+                                <span>Ciências</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress" id="ciencias-progress" data-progress="0"></div>
+                            </div>
+                            <span class="progress-percent" id="ciencias-percent">0%</span>
+                        </div>
+                        
+                        <div class="subject-progress-item">
+                            <div class="subject-info">
+                                <i class="fas fa-landmark"></i>
+                                <span>História</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress" id="historia-progress" data-progress="0"></div>
+                            </div>
+                            <span class="progress-percent" id="historia-percent">0%</span>
+                        </div>
+                        
+                        <div class="subject-progress-item">
+                            <div class="subject-info">
+                                <i class="fas fa-globe-americas"></i>
+                                <span>Geografia</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress" id="geografia-progress" data-progress="0"></div>
+                            </div>
+                            <span class="progress-percent" id="geografia-percent">0%</span>
+                        </div>
+                        
+                        <div class="subject-progress-item">
+                            <div class="subject-info">
+                                <i class="fas fa-pen-fancy"></i>
+                                <span>Redação</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress" id="redacao-progress" data-progress="0"></div>
+                            </div>
+                            <span class="progress-percent" id="redacao-percent">0%</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="recent-activity">
+                    <h4>Atividade Recente</h4>
+                    <div id="activity-list" class="activity-list">
+                        <div class="activity-item">
+                            <i class="fas fa-info-circle"></i>
+                            <p>Nenhuma atividade recente</p>
+                            <span>--</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <i class="fas fa-brain"></i>
+                    <h3>EstudaMais</h3>
+                    <p>Sua plataforma de estudos inteligente</p>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h4>Recursos</h4>
+                        <ul>
+                            <li><a href="#subjects" class="footer-link">Matérias</a></li>
+                            <li><a href="#quizzes" class="footer-link">Quizzes</a></li>
+                            <li><a href="#simulated" class="footer-link">Simulados</a></li>
+                            <li><a href="#flashcards" class="footer-link">Flashcards</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="link-group">
+                        <h4>Ferramentas</h4>
+                        <ul>
+                            <li><a href="#essay" class="footer-link">Correção de Redação</a></li>
+                            <li><a href="#ai" class="footer-link">Assistente de IA</a></li>
+                            <li><a href="#progress" class="footer-link">Acompanhamento</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="link-group">
+                        <h4>Suporte</h4>
+                        <ul>
+                            <li><a href="#help" class="footer-link">Central de Ajuda</a></li>
+                            <li><a href="#contact" class="footer-link">Contato</a></li>
+                            <li><a href="mailto:ignistech2025@gmail.com" class="footer-link">Contato de Vigilância</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Estuda Mais. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal Central de Ajuda -->
+    <div id="help-modal" class="modal hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Central de Ajuda</h3>
+                <button class="btn-close close-modal"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="modal-body">
+                <h4>Como usar o EstudaMais</h4>
+                <p>O EstudaMais é uma plataforma completa de estudos com as seguintes funcionalidades:</p>
+                
+                <div class="help-section">
+                    <h5>Matérias</h5>
+                    <p>Selecione uma das 6 matérias disponíveis para acessar quizzes, simulados e flashcards específicos.</p>
+                </div>
+                
+                <div class="help-section">
+                    <h5>Quizzes</h5>
+                    <p>Teste seus conhecimentos com 15 perguntas por matéria. Cada quiz tem explicações detalhadas.</p>
+                </div>
+                
+                <div class="help-section">
+                    <h5>Simulados</h5>
+                    <p>Pratique com 20 questões misturadas de todas as matérias, simulando um ambiente de prova real.</p>
+                </div>
+                
+                <div class="help-section">
+                    <h5>Flashcards</h5>
+                    <p>Memorize conceitos importantes com cartões interativos que você pode marcar como aprendidos.</p>
+                </div>
+                
+                <div class="help-section">
+                    <h5>Redação</h5>
+                    <p>Escreva redações e receba correção detalhada com notas por competência e feedback personalizado.</p>
+                </div>
+                
+                <div class="help-section">
+                    <h5>Assistente de IA</h5>
+                    <p>Tire dúvidas em tempo real com nosso assistente inteligente sobre qualquer matéria.</p>
+                </div>
+                
+                <div class="help-section">
+                    <h5>Acompanhamento</h5>
+                    <p>Acompanhe seu progresso geral e por matéria, visualize suas atividades recentes e estatísticas.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Contato -->
+    <div id="contact-modal" class="modal hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Entre em Contato</h3>
+                <button class="btn-close close-modal"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="modal-body">
+                <form id="contact-form">
+                    <div class="form-group">
+                        <label for="contact-name">Nome</label>
+                        <input type="text" id="contact-name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="contact-email">E-mail</label>
+                        <input type="email" id="contact-email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="contact-message">Mensagem</label>
+                        <textarea id="contact-message" rows="5" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn-primary">Enviar Mensagem</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- [ADICIONADO - LOGIN CADASTRO] Modal de Login/Cadastro -->
+    <div id="login-modal" class="modal hidden">
+        <div class="modal-content login-modal-content">
+            <div class="modal-header">
+                <h3>Entrar / Cadastrar</h3>
+                <button class="btn-close close-modal"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="modal-body">
+                <div class="login-tabs">
+                    <button class="tab-btn active" data-tab="login">Entrar</button>
+                    <button class="tab-btn" data-tab="register">Cadastrar</button>
+                </div>
+                
+                <div class="tab-content">
+                    <!-- Formulário de Login -->
+                    <div id="login-tab" class="tab-pane active">
+                        <form id="login-form">
+                            <div class="form-group">
+                                <label for="login-email">E-mail</label>
+                                <input type="email" id="login-email" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="login-password">Senha</label>
+                                <input type="password" id="login-password" required>
+                            </div>
+                            
+                            <button type="submit" class="btn-primary btn-full">Entrar</button>
+                        </form>
+                        <div id="login-message" class="form-message"></div>
+                    </div>
+                    
+                    <!-- Formulário de Cadastro -->
+                    <div id="register-tab" class="tab-pane">
+                        <form id="register-form">
+                            <div class="form-group">
+                                <label for="register-name">Nome</label>
+                                <input type="text" id="register-name" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="register-email">E-mail</label>
+                                <input type="email" id="register-email" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="register-password">Senha</label>
+                                <input type="password" id="register-password" required minlength="6">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="register-confirm-password">Confirmar Senha</label>
+                                <input type="password" id="register-confirm-password" required>
+                            </div>
+                            
+                            <button type="submit" class="btn-primary btn-full">Cadastrar</button>
+                        </form>
+                        <div id="register-message" class="form-message"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- [ADICIONADO - TOAST MESSAGES] Container para mensagens toast -->
+    <div id="toast-container" class="toast-container"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
